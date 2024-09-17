@@ -1,7 +1,7 @@
 #include <stdio.h>
 float div(float a, float b)
 {
-    float result = 0;
+    float result;
     result = a / b;
     return result;
 }
