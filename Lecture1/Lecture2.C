@@ -1,9 +1,15 @@
 #include <stdio.h>
-
-int x = 123; 
+void func(void) {
+    int count = 0;
+    count ++;
+    printf("funcの実行数：%d\n", count);
+}
 
 int main(void) {
-    int y = 456; 
-    printf("グローバル変数は%dで、ローカル変数は%dです。\n", x, y);
+    func();
+    func();
+    func();
+    func();
+
     return 0;
 }
