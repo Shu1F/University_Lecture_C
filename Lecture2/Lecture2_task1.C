@@ -1,5 +1,6 @@
 #include <stdio.h>
 int x;
+
 void mondai1(int b) {
     x = b;
 }
