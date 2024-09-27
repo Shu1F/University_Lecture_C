@@ -159,21 +159,25 @@
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int sum(int x, int y) {
-    int z = x + y;
-    return z;
-}
+// int sum(int x, int y) {
+//     int z = x + y;
+//     return z;
+// }
 
-int threeTimes(int z) {
-    return z * z * z;
-}
+// int threeTimes(int z) {
+//     return z * z * z;
+// }
 
-int main (void) {
-    int a, b, result;
-    a = 2;
-    b = -3;
-    result = threeTimes(sum(a, b));
-    printf("%d+%dの三乗は%d", a, b, result);
-}
+// int main (void) {
+//     int a, b, result;
+//     a = 2;
+//     b = -3;
+//     result = threeTimes(sum(a, b));
+//     printf("%d+%dの三乗は%d", a, b, result);
+// }
+
+
+
+// 練習問題Bもう一度
