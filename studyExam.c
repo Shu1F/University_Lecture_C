@@ -78,41 +78,97 @@
 
 // #授業課題 2-2
 
+// #include <stdio.h>
+
+// void func(int n)
+// {
+//     static count = 0;
+//     count++;
+//     printf("%dは%d番目の素数\n", n, count);
+// }
+
+// int prime(int n)
+// {
+//     int i;
+//     int sosuu = 1;
+//     for (i = 2; i < n; i++)
+//     {
+//         // prime = 2 の時はそもそもこのループに入らずにsosuu = 1をreturnする。
+//         if (n % i == 0)
+//         {
+//             sosuu = 0;
+//             break;
+//         }
+//     }
+//     return sosuu;
+// }
+
+// int main(void)
+// {
+//     int x;
+//     for (int i = 2; i < 20; i++)
+//     {
+//         x = prime(i);
+//         if (x == 1)
+//         {
+//             func(i);
+//         }
+//     }
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// double max(double, double);
+// double calc_abs(double);
+// double cube(double);
+
+// int main(void)
+// {
+//     double a, b;
+//     a = -3.2;
+//     b = 1.4;
+//     printf("max(|%f|, (%f)^3) = %f\n", a, b, max(calc_abs(a), cube(b)));
+//     return 0;
+// }
+
+// double max(double x, double y)
+// {
+//     return (x > y) ? x : y;
+// }
+
+// double calc_abs(double x)
+// {
+//     return (x > 0) ? x : -x;
+// }
+
+// double cube(double x)
+// {
+//     return x * x * x;
+// }
+
 #include <stdio.h>
-
-void func(int n)
-{
-    static count = 0;
-    count++;
-    printf("%dは%d番目の素数\n", n, count);
-}
-
-int prime(int n)
-{
-    int i;
-    int sosuu = 1;
-    for (i = 2; i < n; i++)
-    {
-        // prime = 2 の時はそもそも個のループに入らずにsosuu = 1をreturnする。
-        if (n % i == 0)
-        {
-            sosuu = 0;
-            break;
-        }
-    }
-    return sosuu;
-}
+int max(int, int);
 
 int main(void)
 {
-    int x;
-    for (int i = 2; i < 20; i++)
-    {
-        x = prime(i);
-        if (x == 1)
-        {
-            func(i);
-        }
-    }
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    int d = 4;
+
+    printf("最大値は%dです。", max(max(a, b), max(c, d)));
     return 0;
+}
+
+int max(int x, int y)
+{
+    if (x > y)
+    {
+        return x;
+    }
+    else
+    {
+        return y;
+    }
 }
