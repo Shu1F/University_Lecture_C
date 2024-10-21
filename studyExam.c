@@ -147,28 +147,116 @@
 //     return x * x * x;
 // }
 
+// #include <stdio.h>
+// int max(int, int);
+
+// int main(void)
+// {
+//     int a = 1;
+//     int b = 2;
+//     int c = 3;
+//     int d = 4;
+
+//     printf("最大値は%dです。", max(max(a, b), max(c, d)));
+//     return 0;
+// }
+
+// int max(int x, int y)
+// {
+//     if (x > y)
+//     {
+//         return x;
+//     }
+//     else
+//     {
+//         return y;
+//     }
+// }
+// #include <stdio.h>
+// int rec(int n)
+// {
+//     if (n == 1)
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         return rec(n - 1) + n * n;
+//     }
+// }
+
+// int main(void)
+// {
+//     for (int n = 1; n <= 4; n++)
+//     {
+//         printf("1から%dまでの二乗和の値は%d\n", n, rec(n));
+//     }
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int rec(int n)
+// {
+//     if (n == 1)
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         return rec(n - 2) + n;
+//     }
+// }
+
+// int main(void)
+// {
+//     int n = 11;
+//     printf("%d以下の正の奇数の和は%d\n", n, rec(n));
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int n = 4;
+//     int a, b = 3, c = 2;
+//     for (int i = 3; i <= n; i++)
+//     {
+//         a = 2 * b + c;
+//         c = b;
+//         b = a;
+//     }
+//     printf("数列のa%dの値は%d\n", n, a);
+//     return 0;
+// }
+
 #include <stdio.h>
-int max(int, int);
 
-int main(void)
+int rec(int n)
 {
-    int a = 1;
-    int b = 2;
-    int c = 3;
-    int d = 4;
-
-    printf("最大値は%dです。", max(max(a, b), max(c, d)));
-    return 0;
-}
-
-int max(int x, int y)
-{
-    if (x > y)
+    if (n == 0)
     {
-        return x;
+        return 3;
+    }
+    else if (n == 1)
+    {
+        return 0;
+    }
+    else if (n == 2)
+    {
+        return 2;
     }
     else
     {
-        return y;
+        return rec(n - 2) + rec(n - 3);
+    }
+}
+
+int main(void)
+{
+    int n = 50;
+    for (int i = 0; i <= n; i++)
+    {
+        printf("第%d項：%d\n", i, rec(i));
     }
 }
