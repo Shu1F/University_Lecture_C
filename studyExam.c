@@ -230,33 +230,60 @@
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int rec(int n)
-{
-    if (n == 0)
-    {
-        return 3;
-    }
-    else if (n == 1)
-    {
-        return 0;
-    }
-    else if (n == 2)
-    {
-        return 2;
-    }
-    else
-    {
-        return rec(n - 2) + rec(n - 3);
-    }
-}
+// int rec(int n)
+// {
+//     if (n == 0)
+//     {
+//         return 3;
+//     }
+//     else if (n == 1)
+//     {
+//         return 0;
+//     }
+//     else if (n == 2)
+//     {
+//         return 2;
+//     }
+//     else
+//     {
+//         return rec(n - 2) + rec(n - 3);
+//     }
+// }
 
-int main(void)
+// int main(void)
+// {
+//     int n = 50;
+//     for (int i = 0; i <= n; i++)
+//     {
+//         printf("第%d項：%d\n", i, rec(i));
+//     }
+// }
+
+// #include <stdio.h>
+// int a = 10;
+// void func()
+// {
+//     int b = 5;
+//     static int c = 4;
+//     static int d;
+//     c = 12;
+//     printf("%d %d %d %d ", a, b, c, d);
+//     a--, b++, c++, d++;
+// }
+
+// int main(void)
+// {
+//     func();
+//     func();
+//     return 0;
+// }
+
+int square(int n)
 {
-    int n = 50;
-    for (int i = 0; i <= n; i++)
-    {
-        printf("第%d項：%d\n", i, rec(i));
-    }
+    int twice;
+    twice = n * n;
+
+    return twice;
 }
