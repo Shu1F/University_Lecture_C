@@ -497,26 +497,90 @@
 //     printf("f(%d, %d) = |%d^2 - %d^2| = %d\n", a, b, a, b, second(first(a, b)));
 // }
 
+// #include <stdio.h>
+// int abs(int x)
+// {
+//     return (x > 0) ? x : -x;
+// }
+
+// int cube(int y)
+// {
+//     return y * y * y;
+// }
+
+// int max(int c, int d)
+// {
+//     return (c > d) ? c : d;
+// }
+
+// int main()
+// {
+//     int a = 3;
+//     int b = -2;
+
+//     printf("f(%d, %d) = max(|%d|, %d^3)\n = max(%d, %d)\n = %d\n", a, b, a, b, abs(a), cube(b), max(abs(a), cube(b)));
+// }
+// #include <stdio.h>
+
+// int sum(int n)
+// {
+//     int c, i;
+//     c = 0;
+//     for (i = 0; i <= n; i++)
+//     {
+//         c = c + i;
+//     }
+//     return c;
+// }
+
+// int main(void)
+// {
+//     int n = 10;
+//     int a = sum(n);
+//     printf("1から%dまでの総和は%dです。", n, a);
+//     return 0;
+// }
+
+// 再帰
+// #include <stdio.h>
+// int rec(int n)
+// {
+//     if (n == 1)
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         return rec(n - 1) + n;
+//     }
+// }
+
+// int main()
+// {
+//     int a = 10;
+//     int sum = rec(10);
+
+//     printf("1から%dまでの総和は%dです。", a, sum);
+//     return 0;
+// }
+
 #include <stdio.h>
-int abs(int x)
+
+int rec(int n)
 {
-    return (x > 0) ? x : -x;
+    if (n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return rec(n - 1) * n;
+    }
 }
 
-int cube(int y)
+int main(void)
 {
-    return y * y * y;
-}
-
-int max(int c, int d)
-{
-    return (c > d) ? c : d;
-}
-
-int main()
-{
-    int a = 3;
-    int b = -2;
-
-    printf("f(%d, %d) = max(|%d|, %d^3)\n = max(%d, %d)\n = %d\n", a, b, a, b, abs(a), cube(b), max(abs(a), cube(b)));
+    int num = 4;
+    // int result = rec(num);
+    printf("%dの階乗は%dです。", num, rec(num));
 }
