@@ -280,10 +280,219 @@
 //     return 0;
 // }
 
-int square(int n)
-{
-    int twice;
-    twice = n * n;
+// int square(int n)
+// {
+//     int twice;
+//     twice = n * n;
 
-    return twice;
+//     return twice;
+// }
+
+// #include <stdio.h>
+
+// int square(int x)
+// {
+//     return x * x;
+// }
+
+// int main(void)
+// {
+//     int a, b;
+//     a = 5;
+//     b = square(a);
+//     printf("%dの2乗は %d\n", a, b);
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int power(int a, int b)
+// {
+//     int c = 1;
+//     while (b-- > 0)
+//         c *= a;
+
+//     return c;
+// }
+
+// int main(void)
+// {
+//     int x, n, y;
+//     x = 2;
+//     n = 4;
+//     y = power(x, n);
+
+//     printf("%dの%d乗は%d", x, n, y);
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int a;
+// void kakunin1(int a)
+// {
+//     a = a;
+// }
+
+// void kakunin2(int b)
+// {
+//     int a;
+//     a = b;
+// }
+
+// void kakunin3(int b)
+// {
+//     a = b;
+// }
+
+// int main(void)
+// {
+//     printf("a = %d\n", a); // 0
+
+//     a = 10;
+//     printf("a = %d\n", a); // 10
+
+//     kakunin1(20);
+//     printf("a = %d\n", a); // 10
+
+//     kakunin2(30);
+//     printf("a = %d\n", a); // 10
+
+//     kakunin3(40);
+//     printf("a = %d\n", a); // 40
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int a;
+
+// void func(void)
+// {
+//     static int b = 0;
+//     int c = 0;
+//     printf("%d, %d, %d\n", ++a, b++, c++);
+// }
+
+// int main(void)
+// {
+//     func();
+//     func();
+//     func();
+//     func();
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int square(int x)
+// {
+//     return x * x;
+// }
+
+// int main(void)
+// {
+//     int a, b;
+//     a = -3;
+//     b = square(a);
+//     printf("%dの２乗は%d", a, b);
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int square(int x)
+// {
+//     int a = x * x;
+//     return a;
+// }
+
+// int main(void)
+// {
+//     int a, b;
+//     a = -3;
+//     b = square(a);
+//     printf("%dの２乗は%d", a, b);
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int absolute(int x)
+// {
+//     return (x > 0) ? x : -x;
+// }
+
+// int main()
+// {
+//     int a = -3;
+//     int b = absolute(a);
+
+//     printf("%dの絶対値は%dです。", a, b);
+// }
+
+// #include <stdio.h>
+
+// int first(int x)
+// {
+//     return (x > 0) ? x : -x;
+// }
+
+// int second(int x)
+// {
+//     return x * x * x;
+// }
+
+// int main()
+// {
+//     int a = -5;
+//     int b = second(first(a));
+//     printf("%dの絶対値の3乗は%d", a, b);
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int first(int x, int y)
+// {
+//     int z = x + y;
+//     return z;
+// }
+
+// int second(int w)
+// {
+//     return w * w * w;
+// }
+
+// int main()
+// {
+//     int a = 2;
+//     int b = -5;
+
+//     int c = second(first(a, b));
+
+//     printf("(%d + %d)^3 = %d\n", a, b, c);
+// }
+
+#include <stdio.h>
+int first(int x, int y)
+{
+    int c = x * x;
+    int d = y * y;
+
+    return c - d;
+}
+
+int second(int result)
+{
+    return abs(result);
+}
+int main()
+{
+    int a = 1;
+    int b = 2;
+    printf("f(%d, %d) = |%d^2 - %d^2| = %d\n", a, b, a, b, second(first(a, b)));
 }
