@@ -477,22 +477,46 @@
 //     printf("(%d + %d)^3 = %d\n", a, b, c);
 // }
 
+// #include <stdio.h>
+// int first(int x, int y)
+// {
+//     int c = x * x;
+//     int d = y * y;
+
+//     return c - d;
+// }
+
+// int second(int result)
+// {
+//     return abs(result);
+// }
+// int main()
+// {
+//     int a = 1;
+//     int b = 2;
+//     printf("f(%d, %d) = |%d^2 - %d^2| = %d\n", a, b, a, b, second(first(a, b)));
+// }
+
 #include <stdio.h>
-int first(int x, int y)
+int abs(int x)
 {
-    int c = x * x;
-    int d = y * y;
-
-    return c - d;
+    return (x > 0) ? x : -x;
 }
 
-int second(int result)
+int cube(int y)
 {
-    return abs(result);
+    return y * y * y;
 }
+
+int max(int c, int d)
+{
+    return (c > d) ? c : d;
+}
+
 int main()
 {
-    int a = 1;
-    int b = 2;
-    printf("f(%d, %d) = |%d^2 - %d^2| = %d\n", a, b, a, b, second(first(a, b)));
+    int a = 3;
+    int b = -2;
+
+    printf("f(%d, %d) = max(|%d|, %d^3)\n = max(%d, %d)\n = %d\n", a, b, a, b, abs(a), cube(b), max(abs(a), cube(b)));
 }
