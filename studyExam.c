@@ -564,23 +564,140 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+
+// int rec(int n)
+// {
+//     if (n == 1)
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         return rec(n - 1) * n;
+//     }
+// }
+
+// int main(void)
+// {
+//     int num = 4;
+//     // int result = rec(num);
+//     printf("%dの階乗は%dです。", num, rec(num));
+// }
+
+// #include <stdio.h>
+
+// int rec(int n)
+// {
+//     if (n == 0)
+//     {
+//         return 2;
+//     }
+//     else
+//     {
+//         return -2 * rec(n - 1) + 4;
+//     }
+// }
+
+// int main()
+// {
+//     int num = 4;
+//     printf("%d", rec(num));
+// }
+
+// #include <stdio.h>
+// int main()
+// {
+//     int a = 4;
+//     int b = 2;
+
+//     for (int i = 0; i < a; i++)
+//     {
+//         b = -2 * b + 4;
+//     }
+// }
+
+// #include <stdio.h>
+
+// int rec(int n)
+// {
+//     if (n == 1)
+//     {
+//         return 1;
+//     }
+//     else if (n == 2)
+//     {
+//         return 2;
+//     }
+//     else
+//     {
+//         return -6 * rec(n - 1) - 9 * rec(n - 2);
+//     }
+// }
+
+// int main()
+// {
+//     int num = 4;
+//     printf("%d", rec(num));
+// }
+
+// #include <stdio.h>
+// int rec(int n)
+// {
+//     if (n == 1)
+//     {
+//         return 1;
+//     }
+//     else if (n == 2)
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         return rec(n - 1) + rec(n - 2);
+//     }
+// }
+
+// int main()
+// {
+//     int num = 10;
+//     for (int i = 1; i <= num; i++)
+//     {
+//         printf("フィボナッチ数列の第%d項は%d\n", i, rec(i));
+//     }
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     int n = 4;
+//     int a, b = 2, c = 1;
+//     for (int i = 3; i <= n; i++)
+//     {
+//         a = -6 * b - 9 * c;
+//         c = b;
+//         b = a;
+//     }
+
+//     printf("数列a%dの値は%d\n", n, a);
+//     return 0;
+// }
+
 #include <stdio.h>
 
-int rec(int n)
+int main()
 {
-    if (n == 1)
-    {
-        return 1;
-    }
-    else
-    {
-        return rec(n - 1) * n;
-    }
-}
+    int a, b = 1, c = 1;
+    int d = 10;
 
-int main(void)
-{
-    int num = 4;
-    // int result = rec(num);
-    printf("%dの階乗は%dです。", num, rec(num));
+    for (int i = 3; i <= d; i++)
+    {
+        a = b + c;
+        c = b;
+        b = a;
+    }
+    printf("%d\n", a);
+    return 0;
 }
